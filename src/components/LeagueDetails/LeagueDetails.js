@@ -19,10 +19,10 @@ const LeagueDetails = () => {
     console.log(league);
 
     useEffect(() => {
-        fetch(`https://www.thesportsdb.com/api/v1/json/1/lookupleague.php?id=${idLeague}`)
+        fetch(`https://www.thesportsdb.com/api/v1/json/1/lookupleague.php?id=${id}`)
             .then(res => res.json())
             .then(data => setLeague(data.leagues[0]))
-    }, [idLeague])
+    },)
 
     let image;
     if (strGender === "Male") {
